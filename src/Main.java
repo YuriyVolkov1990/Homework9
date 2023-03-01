@@ -12,7 +12,15 @@ public class Main {
     }
     public static void task1() {
         int[] arr = generateRandomArray();
-
+        int summa = 0;
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int e : arr) {
+            summa += e;
+        }
+        System.out.println(summa);
 
     }
 }

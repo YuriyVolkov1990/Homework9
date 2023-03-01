@@ -3,6 +3,7 @@ public class Main {
     public static void main(String[] args) {
             task1();
             task2();
+            task3();
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
@@ -15,15 +16,15 @@ public class Main {
     public static void task1() {
         System.out.println("Задача 1");
         int[] arr = generateRandomArray();
-        int summa = 0;
+        int sum = 0;
         for (int i : arr) {
             System.out.print(i + " ");
         }
         System.out.println();
-        for (int e : arr) {
-            summa += e;
+        for (int i : arr) {
+            sum += i;
         }
-        System.out.println("Сумма трат за месяц составила " +summa+ " рублей");
+        System.out.println("Сумма трат за месяц составила " +sum+ " рублей");
     }
     public static void task2() {
         System.out.println("Задача 2");
@@ -34,5 +35,21 @@ public class Main {
         System.out.println();
         Arrays.sort(arr);
         System.out.println("Минимальная сумма трат за день составила " + arr[0] + " рублей. Максимальная сумма трат за день составила "+ arr[29] + " рублей");
+    }
+    public static void task3() {
+        System.out.println("Задача 3");
+        int[] arr = generateRandomArray();
+        double sum = 0;
+        double averageValue;
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int i : arr) {
+            sum += i;
+        }
+        averageValue = sum / arr.length;
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+        System.out.println("Средняя сумма трат за месяц составила " + averageValue + " рублей");
     }
 }

@@ -1,6 +1,8 @@
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
             task1();
+            task2();
     }
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
@@ -11,6 +13,7 @@ public class Main {
         return arr;
     }
     public static void task1() {
+        System.out.println("Задача 1");
         int[] arr = generateRandomArray();
         int summa = 0;
         for (int i : arr) {
@@ -20,7 +23,16 @@ public class Main {
         for (int e : arr) {
             summa += e;
         }
-        System.out.println(summa);
-
+        System.out.println("Сумма трат за месяц составила " +summa+ " рублей");
+    }
+    public static void task2() {
+        System.out.println("Задача 2");
+        int[] arr = generateRandomArray();
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        Arrays.sort(arr);
+        System.out.println("Минимальная сумма трат за день составила " + arr[0] + " рублей. Максимальная сумма трат за день составила "+ arr[29] + " рублей");
     }
 }
